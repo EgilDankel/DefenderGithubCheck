@@ -1,47 +1,15 @@
 Microsoft Security DevOps is a command line application that integrates static analysis tools into the development lifecycle. Security DevOps installs, configures, and runs the latest versions of static analysis tools such as, SDL, security and compliance tools. Security DevOps is data-driven with portable configurations that enable deterministic execution across multiple environments.
 
 Security DevOps uses the following Open Source tools:
+The Microsoft Security DevOps uses the following Open Source tools:
 
-name: MSDO windows-latest
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  sample:
-    name: Microsoft Security DevOps Analysis
-
-    # MSDO runs on windows-latest.
-    # ubuntu-latest and macos-latest supporting coming soon
-    runs-on: windows-latest
-
-    steps:
-
-      # Checkout your code repository to scan
-    - uses: actions/checkout@v3
-
-      # Install dotnet, used by MSDO
-    - uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: |
-          5.0.x
-          6.0.x
-
-      # Run analyzers
-    - name: Run Microsoft Security DevOps Analysis
-      uses: microsoft/security-devops-action@preview
-      id: msdo
-
-      # Upload alerts to the Security tab
-    - name: Upload alerts to Security tab
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-        sarif_file: ${{ steps.msdo.outputs.sarifFile }}
-
-      # Upload alerts file as a workflow artifact
-    - name: Upload alerts file as a workflow artifact
-      uses: actions/upload-artifact@v3
-      with:  
-        name: alerts
-        path: ${{ steps.msdo.outputs.sarifFile }}
+Name	Language	License
+AntiMalware	AntiMalware protection in Windows from Windows Defender, that scans source code and breaks the build if malware has been found	Not Open Source
+Bandit	Python	Apache License 2.0
+BinSkim	Binary--Windows, ELF	MIT License
+Credscan	Credential Scanner (also known as CredScan) is a tool developed and maintained by Microsoft to identify credential leaks such as those in source code and configuration files
+common types: default passwords, SQL connection strings, Certificates with private keys	Not Open Source
+ESlint	JavaScript	MIT License
+Template Analyzer	ARM template, Bicep file	MIT License
+Terrascan	Terraform (HCL2), Kubernetes (JSON/YAML), Helm v3, Kustomize, Dockerfiles, Cloud Formation	Apache License 2.0
+Trivy	container images, file systems, git repositories	Apache License 2.0
