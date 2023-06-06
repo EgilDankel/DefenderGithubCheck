@@ -1,39 +1,47 @@
-# Equinor template repo
+Microsoft Security DevOps is a command line application that integrates static analysis tools into the development lifecycle. Security DevOps installs, configures, and runs the latest versions of static analysis tools such as, SDL, security and compliance tools. Security DevOps is data-driven with portable configurations that enable deterministic execution across multiple environments.
 
-This is a template containing all the essentials you need when creating a new repo for a project. The main components are the following:
+Security DevOps uses the following Open Source tools:
 
-- `docs` - This is folder contains the setup needed to build the docstring documentation.
-- `src` - Main folder for code modules.
-- `test` - Folder containing tests.
-- `.github/workflows/lint-and-format.yml` - Github Actions workflow for lint checking and automated testing.
-- `pre-commit-config.yaml` - Pre-commit configuration for automatically running lint checking and automated testing before committing.
-- `pyproject.toml`, `poetry.lock` - Project and package definition.
-- `setup.cfg` - Configuration of linting tools.
+name: MSDO windows-latest
+on:
+  push:
+    branches:
+      - main
 
+jobs:
+  sample:
+    name: Microsoft Security DevOps Analysis
 
-## Getting started
+    # MSDO runs on windows-latest.
+    # ubuntu-latest and macos-latest supporting coming soon
+    runs-on: windows-latest
 
-1. Install [poetry](https://python-poetry.org/docs/)
-1. Clone repository
-1. Run `poetry config virtualenvs.in-project true` followed by `poetry install` from the project root folder. A .venv folder should now be created and placed in the root of the project. 
-1. Run `poetry shell` to create a new poetry shell, followed `jupyter notebook` to open [jupyter notebook](https://jupyter.org/) in this environment. 
-1. Install pre-commit hook by running `poetry run pre-commit install`
+    steps:
 
-## How to build the docs
-Build `.rst` files
+      # Checkout your code repository to scan
+    - uses: actions/checkout@v3
 
-```
-poetry run sphinx-apidoc -o docs/source src
-```
+      # Install dotnet, used by MSDO
+    - uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: |
+          5.0.x
+          6.0.x
 
-Build HTML files from `.rst` files
+      # Run analyzers
+    - name: Run Microsoft Security DevOps Analysis
+      uses: microsoft/security-devops-action@preview
+      id: msdo
 
-```
-poetry run sphinx-build -b html docs/source docs/build
-```
+      # Upload alerts to the Security tab
+    - name: Upload alerts to Security tab
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: ${{ steps.msdo.outputs.sarifFile }}
 
-The docs can now be accessed under docs/build. 
-
-## Run tests
-
-`poetry run python -m pytest`
+      # Upload alerts file as a workflow artifact
+    - name: Upload alerts file as a workflow artifact
+      uses: actions/upload-artifact@v3
+      with:  
+        name: alerts
+        path: ${{ steps.msdo.outputs.sarifFile }}
