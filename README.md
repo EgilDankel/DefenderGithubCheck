@@ -1,4 +1,4 @@
-# Equinor Trading template repo
+# Equinor template repo
 
 This is a template containing all the essentials you need when creating a new repo for a project. The main components are the following:
 
