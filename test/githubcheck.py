@@ -4,8 +4,10 @@ from src.github_check import github_check
 def github_check() -> None:
     assert github_check() == "Github scanning done"
 
-################ Test for secret scanning ###################
-    
+################ Test runs for secret scanning ###################
+
+https://username:password@proxy:8080
+
 aws_access_key_id: aabb3333b33-f333ddd-dbdb33-db2383828232b32
 aws_secret_access_key:  aabb3333b33-fd3535d-dbdb33-db2383828232b32
 rovider	Token	Partner	User	Push protection
