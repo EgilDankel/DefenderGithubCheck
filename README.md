@@ -4,6 +4,14 @@
 ###   DefenderGithubCheck purpose: ###
 Create a connection between Defender and Github Checking for testing Security vulnerabilites.
 
+
+
+### Relevant information: ####
+https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/DevOpsSecurity    > Main page for Devops Security in Microsoft Defender for Cloud | DevOps Security (Preview)
+
+Test folder: Contains deliberate testing with Hashes in cleartext and code flaws.
+
+
 ### Secrets: ###
 GitHub scans repositories for known types of secrets, to prevent fraudulent use of secrets that were accidentally committed to repositories. 
 Secret scanning will scan the entire Git history on all branches present in the GitHub repository for any secrets. Examples of secrets are tokens 
@@ -24,9 +32,3 @@ Code scanning can also prevent developers from introducing new problems. Scans c
 or scans can be triggered when a specific event occurs in the repository, such as a push. If code scanning finds a potential 
 vulnerability or error in code, GitHub displays an alert in the repository. A vulnerability is a problem in a project's code 
 that could be exploited to damage the confidentiality, integrity, or availability of the project.
-
-
-### Relevant information: ####
-https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/DevOpsSecurity    > Main page for Devops Security in Microsoft Defender for Cloud | DevOps Security (Preview)
-
-Test folder: Contains deliberate testing with Hashes in cleartext and code flaws.
