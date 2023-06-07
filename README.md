@@ -1,8 +1,4 @@
-`   .DefenderGithubCheck
-    Last revision: 07.07.2023
-    _Egil Dankel _
-
-`
+`   .DefenderGithubCheck Last revision: 07.07.2023 Egil Dankel`
    
 
 ###   DefenderGithubCheck purpose: ###
