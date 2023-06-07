@@ -29,4 +29,4 @@ that could be exploited to damage the confidentiality, integrity, or availabilit
 ### Relevant information: ####
 https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/DevOpsSecurity    > Main page for Devops Security in Microsoft Defender for Cloud | DevOps Security (Preview)
 
-
+Test folder: Contains deliberate testing with Hashes in cleartext and code flaws.
