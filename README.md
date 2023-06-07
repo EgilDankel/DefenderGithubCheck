@@ -1,7 +1,5 @@
-#   .DefenderGithubCheck
-# 
-#   by Egil Dankel 2023
-#   
+`   .DefenderGithubCheck by Egil Dankel 2023`
+   
 
 ###   DefenderGithubCheck purpose: ###
 Create a connection between Defender and Github Checking for testing Security vulnerabilites.
