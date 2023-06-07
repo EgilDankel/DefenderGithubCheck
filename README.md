@@ -3,8 +3,8 @@
 #   by Egil Dankel 2023
 #   
 
-###   DefenderGithubCheck Repo purpose ###
-Defender Github Checking for Security vulnerabilites.
+###   DefenderGithubCheck purpose: ###
+Create a connection between Defender and Github Checking for testing Security vulnerabilites.
 
 ### Secrets ###
 GitHub scans repositories for known types of secrets, to prevent fraudulent use of secrets that were accidentally committed to repositories. 
