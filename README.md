@@ -1,5 +1,7 @@
 `   .DefenderGithubCheck Last revision: 07.07.2023 Egil Dankel`
-     Date of execution: 06.06.2023
+
+### Github issue ### 
+https://github.com/equinor/Solum/issues/12069
   
 ###   DefenderGithubCheck purpose: ###
 Create a connection between Defender and Github Checking for testing Security vulnerabilites.
