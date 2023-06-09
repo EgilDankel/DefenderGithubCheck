@@ -12,9 +12,9 @@ Create a connection between Defender and Github Checking for testing Security vu
 
 Check reference https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference. 
 
-##Most relevant findings from the recommendations from Microsoft related to GitHub Security ##
+## Most relevant findings from the recommendations from Microsoft related to GitHub Security ##
 
-## 1- GitHub repositories should have Code scanning enabled. ##
+<b>1- GitHub repositories should have Code scanning enabled.</b>
 Impact: Medium 
 GitHub uses code scanning to analyze code in order to find security vulnerabilities and errors in code. Code scanning can be used to find, triage, and prioritize fixes for existing problems in your code. Code scanning can also prevent developers from introducing new problems. Scans can be scheduled for specific days and times, or scans can be triggered when a specific event occurs in the repository, such as a push. If code scanning finds a potential vulnerability or error in code, GitHub displays an alert in the repository. A vulnerability is a problem in a project's code that could be exploited to damage the confidentiality, integrity, or availability of the project.
 
