@@ -4,7 +4,25 @@
 https://github.com/equinor/Solum/issues/12069
   
 ###   DefenderGithubCheck purpose: ###
-Create a connection between Defender and Github Checking for testing Security vulnerabilites.
+Create a connection between Defender and Github Checking for testing Security vulnerabilites. This will extend Defender for Cloud security feature aoming these Defender for Clouds cloud Security Posture management (CSPM). 
+
+### Recommendations ### 
+
+The recommendations are the following: https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference. 
+For Github specifically the settings that should be enabled are: 
+
+# GitHub repositories should have Code scanning enabled. #
+Impact: Medium 
+GitHub uses code scanning to analyze code in order to find security vulnerabilities and errors in code. Code scanning can be used to find, triage, and prioritize fixes for existing problems in your code. Code scanning can also prevent developers from introducing new problems. Scans can be scheduled for specific days and times, or scans can be triggered when a specific event occurs in the repository, such as a push. If code scanning finds a potential vulnerability or error in code, GitHub displays an alert in the repository. A vulnerability is a problem in a project's code that could be exploited to damage the confidentiality, integrity, or availability of the project.
+
+# GitHub repositories should have Dependabot scanning enabled. #
+Impact: Medium
+GitHub sends Dependabot alerts when it detects vulnerabilities in code dependencies that affect repositories. A vulnerability is a problem in a project's code that could be exploited to damage the confidentiality, integrity, or availability of the project or other projects that use its code. Vulnerabilities vary in type, severity, and method of attack. When code depends on a package that has a security vulnerability, this vulnerable dependency can cause a range of problems.
+
+# GitHub repositories should have Secret scanning enabled #
+Impact: High 
+GitHub scans repositories for known types of secrets, to prevent fraudulent use of secrets that were accidentally committed to repositories. Secret scanning will scan the entire Git history on all branches present in the GitHub repository for any secrets. Examples of secrets are tokens and private keys that a service provider can issue for authentication. If a secret is checked into a repository, anyone who has read access to the repository can use the secret to access the external service with those privileges. Secrets should be stored in a dedicated, secure location outside the repository for the project.
+
 
 Main page for Devops Security in Microsoft Defender for Cloud | DevOps Security (Preview)
 https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/DevOpsSecurity  
