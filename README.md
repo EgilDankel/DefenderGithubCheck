@@ -1,18 +1,18 @@
 `   .DefenderGithubCheck Last revision: 07.07.2023 Egil Dankel`
 
-### Relevant links ### 
+## Relevant links ##
 https://github.com/equinor/Solum/issues/12069
 https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/DevOpsSecurity  
 
   
-###   DefenderGithubCheck purpose: ###
+##   DefenderGithubCheck purpose: ##
 Create a connection between Defender and Github Checking for testing Security vulnerabilites. This will extend Defender for Cloud security feature aoming these Defender for Clouds cloud Security Posture management (CSPM). 
 
-### Recommendations from Microsoft ### 
+## Recommendations from Microsoft ##
 
 Check reference https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference. 
 
-### Most relevant findings from the recommendations from Microsoft related to GitHub Security ### 
+##Most relevant findings from the recommendations from Microsoft related to GitHub Security ##
 
 # 1- GitHub repositories should have Code scanning enabled. #
 Impact: Medium 
@@ -26,9 +26,9 @@ GitHub sends Dependabot alerts when it detects vulnerabilities in code dependenc
 Impact: High 
 GitHub scans repositories for known types of secrets, to prevent fraudulent use of secrets that were accidentally committed to repositories. Secret scanning will scan the entire Git history on all branches present in the GitHub repository for any secrets. Examples of secrets are tokens and private keys that a service provider can issue for authentication. If a secret is checked into a repository, anyone who has read access to the repository can use the secret to access the external service with those privileges. Secrets should be stored in a dedicated, secure location outside the repository for the project.
 
-### Folder structure: ####
+## Folder structure: ##
 
-### Issue information: ####
+## Issue information: ##
 
 Goal
 Solum assessment for github repositories using Defender for DevOps
