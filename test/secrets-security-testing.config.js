@@ -9,7 +9,18 @@ location = var.resource_group_location
 storage_account_name = var.storage_account_name
 storage_account_access_key = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
 service_plan_id = azure_service_plan.az_asp.id
-
+azure_storage_account_key  = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+azure_sql_connection_string  = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+azure_management_certificate  = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+azure_search_query_key = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+azure_search_admin_key = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+azure_sas_token  = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+azure_ml_web_service_classic_identifiable_key  = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+azure_function_key  = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+azure_devops_personal_access_token  = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+azure_cosmosdb_key_identifiable  = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+azure_cache_for_redis_access_key  = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+azure_batch_key_identifiable  = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
 
 }
     
