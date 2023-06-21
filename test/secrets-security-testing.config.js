@@ -1,5 +1,18 @@
 secrets-security-testing.config.js
+#Create function app 
+resource "azurerm_windows_function_app " az_afa" { 
+    
+Name = "az-afa-1"
+resource_group_name = var.resource_group_name
+location = var.resource_group_location
 
+storage_account_name = var.storage_account_name
+storage_account_access_key = "zdf3434aUGgsd355333==23432safJAKFKAFf/FSF(SFSAFJSA)SF===F" 
+service_plan_id = azure_service_plan.az_asp.id
+
+
+}
+    
 "encryptionContext": {
     "SecretARN": "arn:aws-cn:secretsmanager:us-west-2:111122223333:secret:test-secret-a1b2c3",
     "SecretVersionId": "EXAMPLE1-90ab-cdef-fedc-ba987SECRET1"
